@@ -1,0 +1,64 @@
+<?php
+  session_start();
+  require('function.php');
+  $con=con();
+  if(isset($_SESSION['user_id']))
+   {
+     $id=$_SESSION['user_id'];
+   }
+   else
+    {
+      header("location:http://".$_SERVER['HTTP_HOST'].dirname($_SERVER['PHP_SELF'])."/index.php");
+      exit();
+    }
+    $a;
+    //$user = $_POST["user_id"];
+    $userid = $_SESSION['user_id'];
+    $qu="select * from Courses ";
+    $result=$con->query($qu);
+?>
+<!DOCTYPE html>
+ <html>
+  <head>
+   <title> Delete Course Page </title>
+   <a name="top"> </a>
+    <link rel="shortcut icon" href="img/01.jpeg" />
+   <link  href="css/delete.css" rel="stylesheet"/>
+  </head>
+  <body>
+   <a name="top"> </a>
+    <div id="full">
+      <div id="header">
+        <div id="lg"> <img src="img/03.jpeg" alt="Image" height="65" width="100"/></div>
+        <div id="li">
+          <a href="admin_home.php" class="link"> Home Page &nbsp; &nbsp;</a>
+          <a href="add.php" class="link" > Add Course  &nbsp;  &nbsp;</a>
+          <a href="delet_course.php" class="link" > Delete Course  &nbsp;  &nbsp;</a>
+           <a href="add_teacher.php" class="link" > Add Teacher  &nbsp;  &nbsp;</a>
+          <a href="delete.php" class="link"> Delete Teacher &nbsp;&nbsp; </a> 
+          <a href="logout.php" class="link"> Logout  &nbsp;  &nbsp;</a>
+        </div>
+      </div>
+     <div id="about"> <marquee><h4> Welcome Admin <?php echo "$userid";?> Now You can Manage DATA </h4></marquee></div>
+      <div id="te"> <center><h3> Available Courses </h3>
+      <?php
+           echo "<center><table>";
+           echo "<tr><th>Course</th><th>Branch</th><th>Semester</th><th>Subject</th><th>Teacher</th><th>Delete</th></tr>";
+           $a=0;
+           while($row1=$result->fetch_array())
+            {
+              $a=1;
+              echo "<tr><td>$row1[0]</td><td> $row1[1]</td><td> $row1[2]</td><td>$row1[3]</td><td>$row1[4]</td><td><form action='delete_course_back.php' method='post' ><input type='text' value='$row1[0]' style='display:none' name='course'><input type='text' value='$row1[1]' style='display:none' name='branch'><input type='text' value='$row1[2]' style='display:none' name='semester'><input type='text' value='$row1[3]' style='display:none' name='subject'><input type='submit'value='Delete Course'></a></form></td></tr>";
+            }
+            echo "</table></center>";
+            if($a==0)
+             {
+               echo "No Teacher Available Please add more Teacher";
+             }
+          ?>
+          <a href="#top" style="color:red"> Got to Top </a>
+        </div>
+ 
+      </div>
+    </body>
+  </html>

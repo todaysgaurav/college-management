@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+ <html>
+  <head>
+   <title> Login Page </title>
+    <link rel="shortcut icon" href="img/01.jpeg" />
+   <link  href="css/search.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <div id="full">
+      <div id="header">
+        <div id="lg"> <img src="img/03.jpeg" alt="Image" height="65" width="100"/></div>
+        <div id="li">
+          <a href="index.php" class="link"> Home Page &nbsp; &nbsp;</a>
+          <a href="search.php" class="link" > Search Course  &nbsp;  &nbsp;</a>
+          <a href="see_teacher.php" class="link" > Teacher Details  &nbsp;  &nbsp;</a>
+          <a href="login.php" class="link"> Login &nbsp;&nbsp; </a> 
+          <a href="about.php" class="link"> About  Us  &nbsp;  &nbsp;</a>
+        </div>
+      </div>
+     <div id="about"> <marquee><h2>CSED MNNIT </h2></marquee></div>
+     <div id="te"> <center><h1> Please login here </h1>
+     <form action="login_back.php" method="post">
+           <center>
+           <table>
+             <tr>
+               <th> Select Login Type </th>
+               <td>
+                <select name="se">
+                 <option name="ADMIN"> ADMIN </option>
+                 <option name="TEACHER"> TEACHER </option>
+                 </select>
+               </td>
+             </tr>
+             <tr>
+              <th> Enter User Id </th>
+              <td> <input type="text" name="login_id" placeholder="Login Id" required/> </td>
+             </tr>
+             <tr>
+              <th> Enter Password </th>
+              <td> <input type="password" name="pwd" placeholder="Password" required/> </td>
+             </tr>
+             </table>
+             </center>
+             <center><input type="reset" name="reset" value="Reset"/> <span> &nbsp;&nbsp;</span><input type="submit" name="submit" value="submit"/></center>
+             <br/>
+          </form>
+     </center>
+     </div>
+    </div> 
+ </body>
+</html>

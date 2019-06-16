@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+ <html>
+  <head>
+   <title> About Page </title>
+    <link rel="shortcut icon" href="img/01.jpeg" />
+   <link  href="css/about.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <div id="full">
+      <div id="header">
+        <div id="lg"> <img src="img/03.jpeg" alt="Image" height="65" width="100"/></div>
+        <div id="li">
+          <a href="index.php" class="link"> Home Page &nbsp; &nbsp;</a>
+          <a href="search.php" class="link" > Search Course  &nbsp;  &nbsp;</a>
+          <a href="see_teacher.php" class="link" > Teacher Details  &nbsp;  &nbsp;</a>
+          <a href="about.php" class="link"> About  Us  &nbsp;  &nbsp;</a>
+        </div>
+      </div>
+     <div id="about"> <marquee><h2> About Us </h2></marquee></div> 
+    <div id="im">
+     <div id="i1">
+      <img src="img/05.jpeg" alt="Image" height="200" width="200" style="border:2px solid black; border-radius:50%;"/>
+      <br/>
+      <h3 style="color:red;font-size:25px;"> Ankit Mishra </h3>
+     </div>
+     <div id="i2">
+      <img src="img/06.jpeg" alt="Image" height="200" width="200" style="border:2px solid black; border-radius:50%;"/>
+      <br/>
+      <h3 style="color:red;font-size:25px;"> &nbsp;Chetanya </h3>
+     </div>
+     <div id="i3">
+      <img src="img/07.jpeg" alt="Image" height="200" width="200" style="border:2px solid black; border-radius:50%;"/>
+      <br/>
+      <h3 style="color:red;font-size:25px;"> &nbsp;Rishabh</h3>
+     </div>
+     <div id="i4">
+      <img src="img/08.jpeg" alt="Image" height="200" width="200" style="border:2px solid black; border-radius:50%;"/>
+      <br/>
+      <h3 style="color:red;font-size:25px;"> &nbsp;Gaurav </h3>
+     </div>
+    </div>
+  </div>
+ </body>
+</html>
